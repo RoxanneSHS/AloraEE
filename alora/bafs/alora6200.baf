@@ -1,0 +1,14 @@
+IF
+    Global("StartEndBios","AR6200",1)
+    InParty("CMAlora")
+    Global("CMAloraBio","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("CMAloraBio","GLOBAL",1)
+        TextScreen("CMALOND1")
+        SetGlobal("CMAloraBio","GLOBAL",1)
+        SmallWait(1)
+        SetGlobal("CMAloraBio","GLOBAL",1)
+        Continue()
+        SetGlobal("CMAloraBio","GLOBAL",1)
+END
