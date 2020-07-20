@@ -41,19 +41,13 @@ THEN
 END
 
 IF
-	InParty(Myself)
 	HPLT("Edwin",15)
 	InParty("Edwin")
+	InParty(Myself)
 	Exists(LastAttackerOf("Edwin"))
 THEN
 	RESPONSE #100
 		Attack(LastAttackerOf("Edwin"))
 END
 
-IF
-	InParty(Myself)
-	Dead("Edwin") 
-THEN
-	RESPONSE #100
-		Attack(LastAttackerOf("Edwin"))
-END
+
