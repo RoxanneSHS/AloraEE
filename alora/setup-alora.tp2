@@ -7,25 +7,11 @@
 
 BACKUP ~alora\backup~
 //AUTHOR ~"http://chosenofmystra.com"~
-SUPPORT ~Roxanne - https://baldursextendedworld.com/Branched-EET-Updates-2/ or roxanne@baldursextendedworld.com~
+SUPPORT ~https://github.com/RoxanneSHS/AloraEE/issues~
 
-VERSION ~1.8~ 
+VERSION ~1.9~
 AUTO_TRA ~alora\%s~
 
-ALWAYS 
-  ACTION_DEFINE_ARRAY fl#reload BEGIN Setup END
-  ACTION_DEFINE_ARRAY fl#noconvert BEGIN END
-  
-  LAF HANDLE_CHARSETS 
-    INT_VAR
-      infer_charsets = 1
-    STR_VAR
-      tra_path = EVAL ~%MOD_FOLDER%~
-      noconvert_array = fl#noconvert
-      reload_array = fl#reload
-	  iconv_path = ~alora/iconv~ 
-  END
-END
 
 LANGUAGE ~English~
          ~English~
@@ -45,7 +31,7 @@ LANGUAGE ~Polish (by Aristo)~
 
 BEGIN @0
 
-REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ @1
+REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @1
 
 // Copy Sounds
 
